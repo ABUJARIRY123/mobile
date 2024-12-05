@@ -1,19 +1,19 @@
 <div>
-    <h2>Social Media Post Scoring</h2>
-  
-    <div *ngFor="let post of posts; let i = index">
-      <p>
-        <strong>{{ post.id }}</strong>: Likes = {{ post.likes }},
-        Shares = {{ post.shares }}, Comments = {{ post.comments }}
-      </p>
-    </div>
-  
-    <button (click)="findTopPost()">Find Top Post</button>
-  
-    <div *ngIf="topPost">
-      <h3>Top Post</h3>
-      <p>Post ID: {{ topPost.id }}</p>
-      <p>Score: {{ topPost.score }}</p>
-    </div>
+  <h2>Social Media Post Scoring</h2>
+
+  <div *ngFor="let post of posts; let i = index">
+    <p>
+      <strong>{{ post.id }}</strong>: Likes = {{ post.likes }},
+      Shares = {{ post.shares }}, Comments = {{ post.comments }}
+    </p>
   </div>
-  
+
+  <button (click)="findTopPost()">Find Top Post</button>
+
+  <div *ngIf="topPost">
+    <h3>Top Post</h3>
+    <p>Post ID: {{ topPost?.id }}</p>
+    <p>Score: {{ topPost?.score }}</p>
+    <p>Comments: {{ topPost?.comments }}</p>
+  </div>
+</div>
